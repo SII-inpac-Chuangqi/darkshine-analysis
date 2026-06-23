@@ -1,0 +1,47 @@
+baseline1p6 samples:
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/noOptical/ana
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/noOptical/ana/gmm_target/
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/noOptical/ana/gmm_ecal/
+
+inclusive 1.024E11 EOT，经过truth filter, missing P > 2 GeV, ECAL E < 4 GeV:
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/8GeV_W_0.1X0/ana/inclusive
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/8GeV_W_0.2X0/ana/inclusive
+filter eff:
+8GeV_W_0.1X0: 1.2734375e-06
+8GeV_W_0.2X0: 1.7480469e-06
+
+4GeV W target (0.1X0) 0.75T: inclusive 5e7, signal ~1e5
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/e-_E4_W_noECALBField/inclusive/dp_ana
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/e-_E4_W_noECALBField/signal/dp_ana
+
+4GeV W target (0.2X0) 0.75T: 
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/e-_E4_W_0.2X0_noECALBField
+
+positron samples:
+4GeV W target (0.1X0) 0.75T:
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/e+_E4_W_noECALBField
+
+4GeV baseline1.6 samples:
+https://code.ihep.ac.cn/darkshine/darkshine-simulation/-/wikis/Sample-Production/Baseline-1.6-4GeV
+
+新的inclusive 5E7 validation sample （修复Acts Track truth seed cut）：
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/e-_E4_W_noECALBField/inclusive
+
+inclusive BeamON=1E11（filter eff 可以统计recorded event number / 1E11）：
+/lustre/collider/hepmc/DarkSHINE_Production/Baseline_1.6/e-_E4_W_noECALBField/inclusive_truthfilter
+
+Tasks:
+1. Sample validation: GMM ECAL, GMM Target and EN Target samples are ready now. (Dian)
+   - Use validation.C can do a quick check.
+2. New ECAL related variables. (Zhiyu)
+   - Summarize new variables in Jiyuan's previous study.
+   - Check the kinematic distribution of these variables.
+   - Add high separation power variables in DAna. 
+3. New HCAL related variables. (Rui & Chunxiang)
+   - Check HCAL related varibles (energy, max cell energy ... in HCAL and sideHCAL).
+   - New variables (maybe can use samilar variables in ECAL).
+4. Background estimation. (Dian & Jing)
+5. Truth and reco. match: use angular (direction) and momentum information. (Jing)
+6. Target material and thickness. (Jing)
+7. Limit comparison: 8GeV vs 4GeV. 
+8. CDR.
